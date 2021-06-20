@@ -63,22 +63,20 @@ const app = createApp({
     },
   },
   template: `
+    <h2>Dragon engine</h2>
+
     <div>
       <label for="search-input">
         Query
       </label>
       {{ }}
-      <input id="search-input" type="text" v-model="query" @input="setQueries" required/>
+      <input id="search-input" type="text" v-model="query" @input="setQueries" placeholder="e.g. Chinese dragon" required/>
     </div >
 
     <br>
 
-    <p>
-      <i>Search all engines</i>
-    </p>
-
     <button id="search-button" @click="search()" :disabled="!query" title="Search with all supported engines">
-      Dragon Power!
+      Search all
     </button>
 
     <br>
@@ -86,7 +84,7 @@ const app = createApp({
 
     <div v-if="query">
       <p>
-        <i>Search a selected engine</i>
+        <i>Search query on selected engine</i>
       </p>
 
       <div v-for="engine in this.supportedEngines" key="engine.id">
@@ -96,12 +94,16 @@ const app = createApp({
       </div>
     </div>
 
-    <p>
-      Existing tabs for a search engine will be reused where possible, even if the search query is different.
-    </p>
+    <h2>Help</h2>
 
     <p>
-      Be sure to <b>allow pop-ups</b> on the Search Dragon URL so that tabs can be opened for you.
+      Enter a value for Query box and then search all engines or choose to search a specific one.
+    </p>
+    <p>
+      Once tabs ared opened, the existing tabs for each search engine will be reused on subsequent searches, keeping the total number of tabs limited.
+    </p>
+    <p>
+      Be sure to <b>allow pop-ups</b> on the Search Dragon site, so that tabs are not blocked by your browser. You'll get a notification on the first search and then should click to allow pop-ups.
     </p>
   `,
 });
