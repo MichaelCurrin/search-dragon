@@ -5,8 +5,10 @@ import { createApp } from "https://unpkg.com/vue@3.0.7/dist/vue.esm-browser.js";
 
 const windowObjectRefs = {};
 
-const YAHOO_BASE_SEARCH = "https://search.yahoo.com/search";
-const GOOGLE_BASE_SEARCH = "https://www.google.com/search";
+const SEARCH_BASES = {
+  'yahoo': "https://search.yahoo.com/search",
+  'google': "https://www.google.com/search",
+}
 
 /**
  * Open URL as a tab.
@@ -40,8 +42,9 @@ const app = createApp({
   methods: {
     setQueries() {
       const q = encodeURIComponent(this.query).replace("%20", "+");
-      this.yahooSearch = `${YAHOO_BASE_SEARCH}?q=${q}`;
-      this.googleSearch = `${GOOGLE_BASE_SEARCH}?q=${q}`;
+
+      this.yahooSearch = `${SEARCH_BASES['yahoo']}?q=${q}`;
+      this.googleSearch = `${SEARCH_BASES['google']}?q=${q}`;
     },
     search() {
       nav(this.googleSearch, "googleSearch");
