@@ -1,7 +1,7 @@
 /**
  * Main app module.
  */
-import { createApp } from "https://unpkg.com/vue@3.1.1/dist/vue.esm-browser.js";
+import { createApp } from "https://unpkg.com/vue@3.1.1/dist/vue.esm-browser.prod.js";
 
 const windowObjectRefs = {};
 
