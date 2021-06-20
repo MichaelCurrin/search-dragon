@@ -1,5 +1,5 @@
 # Search Dragon
-> The meta search engine
+> The meta search engine 🐲
 
 <!-- Badges generated with https://michaelcurrin.github.io/badge-generator/ -->
 
@@ -31,7 +31,7 @@
 
 ### Set up and run locally
 
-How to run the web app locally.
+How to run the web app locally. No need for Node or NPM!
 
 1. Clone this original repo or your copy of the repo.
     ```sh
