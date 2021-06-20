@@ -37,8 +37,11 @@ const app = createApp({
   data() {
     return {
       query: "",
+      bing: "",
+      duckDuckGo: "",
       google: "",
       yahoo: "",
+      yandex: "",
       supportedEngines: Object.keys(SEARCH_BASES),
     };
   },
