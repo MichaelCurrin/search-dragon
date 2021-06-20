@@ -6,12 +6,12 @@ import { createApp } from "https://unpkg.com/vue@3.0.7/dist/vue.esm-browser.js";
 const windowObjectRefs = {};
 
 const SEARCH_BASES = {
-  'bing': "https://www.bing.com/search",
-  'duckDuckGo': "https://duckduckgo.com/",
-  'google': "https://www.google.com/search",
-  'yahoo': "https://search.yahoo.com/search",
-  'yandex': 'https://yandex.com/search/',
-}
+  bing: "https://www.bing.com/search",
+  duckDuckGo: "https://duckduckgo.com/",
+  google: "https://www.google.com/search",
+  yahoo: "https://search.yahoo.com/search",
+  yandex: "https://yandex.com/search/",
+};
 
 /**
  * Open URL as a tab.
@@ -39,7 +39,7 @@ const app = createApp({
       query: "",
       google: "",
       yahoo: "",
-      supportedEngines: Object.keys(SEARCH_BASES)
+      supportedEngines: Object.keys(SEARCH_BASES),
     };
   },
   methods: {
@@ -54,8 +54,8 @@ const app = createApp({
     },
     search() {
       for (const engine of this.supportedEngines) {
-        const href = this[engine]
-        nav(href, engine)
+        const href = this[engine];
+        nav(href, engine);
       }
     },
   },
