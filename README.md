@@ -18,13 +18,16 @@
     </a>
 </div>
 
-<br>
+
+## Usage
 
 <div align="center">
 
 [![View site - GH Pages](https://img.shields.io/badge/View_site-GH_Pages-2ea44f?style=for-the-badge)](https://michaelcurrin.github.io/search-dragon/)
 
 </div>
+
+Follow the instructions on the web app to enter a search query and then search on multple search engines at once, each in their own tab.
 
 
 ## Documentation
