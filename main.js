@@ -6,10 +6,10 @@ import { createApp } from "https://unpkg.com/vue@3.0.7/dist/vue.esm-browser.js";
 const windowObjectRefs = {};
 
 const SEARCH_BASES = {
-  'yahoo': "https://search.yahoo.com/search",
-  'google': "https://www.google.com/search",
-  'duckDuckGo': "https://duckduckgo.com/",
   'bing': "https://www.bing.com/search",
+  'duckDuckGo': "https://duckduckgo.com/",
+  'google': "https://www.google.com/search",
+  'yahoo': "https://search.yahoo.com/search",
   'yandex': 'https://yandex.com/search/',
 }
 
@@ -37,8 +37,8 @@ const app = createApp({
   data() {
     return {
       query: "",
-      yahoo: "",
       google: "",
+      yahoo: "",
       supportedEngines: Object.keys(SEARCH_BASES)
     };
   },
@@ -46,10 +46,10 @@ const app = createApp({
     setQueries() {
       const q = encodeURIComponent(this.query).replace("%20", "+");
 
-      this.yahoo = `${SEARCH_BASES.yahoo}?q=${q}`;
-      this.google = `${SEARCH_BASES.google}?q=${q}`;
       this.bing = `${SEARCH_BASES.bing}?q=${q}`;
       this.duckDuckGo = `${SEARCH_BASES.duckDuckGo}?q=${q}`;
+      this.google = `${SEARCH_BASES.google}?q=${q}`;
+      this.yahoo = `${SEARCH_BASES.yahoo}?q=${q}`;
       this.yandex = `${SEARCH_BASES.yandex}?text=${q}`;
     },
     search() {
