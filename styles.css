@@ -1,0 +1,41 @@
+/* Borrowed from the Vue CLI quickstart app's styling for the #app element. */
+body {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+
+header {
+  padding-bottom: 20px;
+}
+
+#search-button {
+  background-color: #1e8507;
+  border-radius: 28px;
+  border: 1px solid #1e8507;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 17px;
+  padding: 16px 31px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #2f6627;
+}
+
+#search-button:hover {
+  background-color: #4a9723;
+}
+
+#search-button:active {
+  position: relative;
+  top: 1px;
+}
+
+#search-button[disabled] {
+  color: rgb(230, 214, 214);
+  background-color: #2c3e50 !important;
+  cursor: not-allowed;
+}
