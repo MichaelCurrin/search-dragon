@@ -5,27 +5,23 @@ import { createApp } from "https://unpkg.com/vue@3.0.7/dist/vue.esm-browser.js";
 
 const windowObjectRefs = {};
 
-const YAHOO_BASE_SEARCH = "https://search.yahoo.com/search"
-const GOOGLE_BASE_SEARCH = "https://www.google.com/search"
+const YAHOO_BASE_SEARCH = "https://search.yahoo.com/search";
+const GOOGLE_BASE_SEARCH = "https://www.google.com/search";
 
 // Do not check if tab is already open. The target is will be the same but the URL might be different.
 function nav(href, target) {
-  console.debug(`Loading: ${target} ${href}`)
+  console.debug(`Loading: ${target} ${href}`);
 
-  let ref = windowObjectRefs[target]
+  let ref = windowObjectRefs[target];
 
-  ref = window.open(
-    href,
-    target,
-  );
-  console.debug(`Loaded: ${target} ${href}`)
+  ref = window.open(href, target);
+  console.debug(`Loaded: ${target} ${href}`);
 
-  windowObjectRefs[target] = ref
+  windowObjectRefs[target] = ref;
 }
 
 const app = createApp({
-  components: {
-  },
+  components: {},
   data() {
     return {
       query: "",
@@ -35,14 +31,14 @@ const app = createApp({
   },
   methods: {
     setQueries() {
-      const q = encodeURIComponent(this.query).replace('%20', '+')
-      this.yahooSearch = `${YAHOO_BASE_SEARCH}?q=${q}`
-      this.googleSearch = `${GOOGLE_BASE_SEARCH}?q=${q}`
+      const q = encodeURIComponent(this.query).replace("%20", "+");
+      this.yahooSearch = `${YAHOO_BASE_SEARCH}?q=${q}`;
+      this.googleSearch = `${GOOGLE_BASE_SEARCH}?q=${q}`;
     },
     search() {
-      nav(this.googleSearch, 'googleSearch')
-      nav(this.yahooSearch, 'yahooSearch')
-    }
+      nav(this.googleSearch, "googleSearch");
+      nav(this.yahooSearch, "yahooSearch");
+    },
   },
   template: `
     <div>
