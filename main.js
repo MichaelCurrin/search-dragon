@@ -16,21 +16,21 @@ const SEARCH_BASES = {
 /**
  * Open URL as a tab.
  *
- * @param {string} href The URL to open.
- * @param {string} target Reference for the tab. Reusing this reference allows overwriting the
+ * @param {string} url The URL to open.
+ * @param {string} windowName Reference for the tab. Reusing this reference allows overwriting the
  *   contents of the tab without opening a new one each time. In this case, this reuse is intended
  *   even for a different URL (as it is expected to still be for the same domain).
  *
  * Do not both to check if tab is closed or open.
  */
-function nav(href, target) {
-  console.debug(`Loading ${target} - ${href}`);
+function nav(url, windowName) {
+  console.debug(`Opening ${windowName} - ${url}`);
 
-  let ref = windowObjectRefs[target];
+  let ref = windowObjectRefs[windowName];
 
-  ref = window.open(href, target);
+  ref = window.open(url, windowName);
 
-  windowObjectRefs[target] = ref;
+  windowObjectRefs[windowName] = ref;
 }
 
 const app = createApp({
@@ -70,12 +70,14 @@ const app = createApp({
         Query
       </label>
       {{ }}
-      <input id="search-input" type="text" v-model="query" @input="setQueries" placeholder="e.g. Chinese dragon" required/>
+      <input id="search-input" type="text" v-model="query" @input="setQueries"
+        placeholder="e.g. Chinese dragon" required/>
     </div >
 
     <br>
 
-    <button id="search-button" @click="search()" :disabled="!query" title="Search with all supported engines">
+    <button id="search-button" @click="search()" :disabled="!query"
+      title="Search with all supported engines">
       Search all
     </button>
 
