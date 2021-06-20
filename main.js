@@ -8,7 +8,16 @@ const windowObjectRefs = {};
 const YAHOO_BASE_SEARCH = "https://search.yahoo.com/search";
 const GOOGLE_BASE_SEARCH = "https://www.google.com/search";
 
-// Do not check if tab is already open. The target is will be the same but the URL might be different.
+/**
+ * Open URL as a tab.
+ *
+ * @param {string} href The URL to open.
+ * @param {string} target Reference for the tab. Reusing this reference allows overwriting the
+ *   contents of the tab without opening a new one each time. In this case, this reuse is intended
+ *   even for a different URL (as it is expected to still be for the same domain).
+ *
+ * Do not both to check if tab is closed or open.
+ */
 function nav(href, target) {
   console.debug(`Loading: ${target} ${href}`);
 
@@ -21,7 +30,6 @@ function nav(href, target) {
 }
 
 const app = createApp({
-  components: {},
   data() {
     return {
       query: "",
