@@ -86,15 +86,11 @@ const app = createApp({
         <i>Search a selected engine</i>
       </p>
 
-      🕵️‍♂️ <a :href="google" target="google">
-        Google
-      </a>
-
-      <br>
-
-      🕵️‍♂️ <a :href="yahoo" target="yahoo">
-       Yahoo
-      </a>
+      <div v-for="engine in this.supportedEngines" key="engine.id">
+        🕵️‍♂️ <a :href="this[engine]" :target="engine">
+          {{ engine[0].toUpperCase() }}{{ engine.slice(1, engine.length)}}
+        </a>
+      </div>
     </div>
   `,
 });
