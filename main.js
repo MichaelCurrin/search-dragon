@@ -95,6 +95,10 @@ const app = createApp({
         </a>
       </div>
     </div>
+
+    <p>
+      Existing tabs for a search engine will be reused where possible, even if the search query is different.
+    </p>
   `,
 });
 
