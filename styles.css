@@ -20,6 +20,10 @@ header {
   margin-top: 50px;
 }
 
+#app {
+  margin: 20px;
+}
+
 #search-button {
   background-color: #1e8507;
   border-radius: 28px;
