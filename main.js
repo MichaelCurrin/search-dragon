@@ -84,7 +84,7 @@ const app = createApp({
 
     <div v-if="query">
       <p>
-        <i>Search query on selected engine</i>
+        <i>Use selected engine</i>
       </p>
 
       <div v-for="engine in this.supportedEngines" key="engine.id">
@@ -97,13 +97,13 @@ const app = createApp({
     <h2>Help</h2>
 
     <p>
-      Enter a value for Query box and then search all engines or choose to search a specific one.
+      Enter a value for Query box and then search all engines (opening or updating multiple tabs at once) or against a specific engine (opening or updating only one tab).
     </p>
     <p>
-      Once tabs ared opened, the existing tabs for each search engine will be reused on subsequent searches, keeping the total number of tabs limited.
+      Once tabs ared opened, the existing tabs for each search engine will be <i>reused</i> for subsequent searches. This keeps the total number of tabs limited.
     </p>
     <p>
-      Be sure to <b>allow pop-ups</b> on the Search Dragon site, so that tabs are not blocked by your browser. You'll get a notification on the first search and then should click to allow pop-ups.
+      ⚠️ Be sure to <b>allow pop-ups</b> on the Search Dragon site, so that new tabs are not blocked by your browser. You'll get a notification on the first search and then should click to allow pop-ups.
     </p>
   `,
 });
