@@ -8,6 +8,9 @@ const windowObjectRefs = {};
 const SEARCH_BASES = {
   'yahoo': "https://search.yahoo.com/search",
   'google': "https://www.google.com/search",
+  'duckDuckGo': "https://duckduckgo.com/",
+  'bing': "https://www.bing.com/search",
+  'yandex': 'https://yandex.com/search/',
 }
 
 /**
@@ -21,12 +24,11 @@ const SEARCH_BASES = {
  * Do not both to check if tab is closed or open.
  */
 function nav(href, target) {
-  console.debug(`Loading: ${target} ${href}`);
+  console.debug(`Loading ${target} - ${href}`);
 
   let ref = windowObjectRefs[target];
 
   ref = window.open(href, target);
-  console.debug(`Loaded: ${target} ${href}`);
 
   windowObjectRefs[target] = ref;
 }
@@ -35,20 +37,26 @@ const app = createApp({
   data() {
     return {
       query: "",
-      yahooSearch: "",
-      googleSearch: "",
+      yahoo: "",
+      google: "",
+      supportedEngines: Object.keys(SEARCH_BASES)
     };
   },
   methods: {
     setQueries() {
       const q = encodeURIComponent(this.query).replace("%20", "+");
 
-      this.yahooSearch = `${SEARCH_BASES['yahoo']}?q=${q}`;
-      this.googleSearch = `${SEARCH_BASES['google']}?q=${q}`;
+      this.yahoo = `${SEARCH_BASES.yahoo}?q=${q}`;
+      this.google = `${SEARCH_BASES.google}?q=${q}`;
+      this.bing = `${SEARCH_BASES.bing}?q=${q}`;
+      this.duckDuckGo = `${SEARCH_BASES.duckDuckGo}?q=${q}`;
+      this.yandex = `${SEARCH_BASES.yandex}?text=${q}`;
     },
     search() {
-      nav(this.googleSearch, "googleSearch");
-      nav(this.yahooSearch, "yahooSearch");
+      for (const engine of this.supportedEngines) {
+        const href = this[engine]
+        nav(href, engine)
+      }
     },
   },
   template: `
@@ -66,7 +74,7 @@ const app = createApp({
       <i>Search all engines</i>
     </p>
 
-    <button id="search-button" @click="search()" :disabled="!query">
+    <button id="search-button" @click="search()" :disabled="!query" title="Search with all supported engines">
       Dragon Power!
     </button>
 
@@ -78,13 +86,13 @@ const app = createApp({
         <i>Search a selected engine</i>
       </p>
 
-      🕵️‍♂️ <a :href="googleSearch" target="googleSearch">
+      🕵️‍♂️ <a :href="google" target="google">
         Google
       </a>
 
       <br>
 
-      🕵️‍♂️ <a :href="yahooSearch" target="yahooSearch">
+      🕵️‍♂️ <a :href="yahoo" target="yahoo">
        Yahoo
       </a>
     </div>
