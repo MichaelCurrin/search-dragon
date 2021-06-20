@@ -99,6 +99,10 @@ const app = createApp({
     <p>
       Existing tabs for a search engine will be reused where possible, even if the search query is different.
     </p>
+
+    <p>
+      Be sure to <b>allow pop-ups</b> on the Search Dragon URL so that tabs can be opened for you.
+    </p>
   `,
 });
 
