@@ -63,7 +63,7 @@ const app = createApp({
     },
   },
   template: `
-    <h2>Dragon engine</h2>
+    <h2>Dragon search engine</h2>
 
     <div>
       <label for="search-input">
@@ -96,16 +96,16 @@ const app = createApp({
       </div>
     </div>
 
-    <h2>Help</h2>
+    <h2>How to use</h2>
 
     <p>
       Enter a value for Query box and then search all engines (opening or updating multiple tabs at once) or against a specific engine (opening or updating only one tab).
     </p>
     <p>
-      Once tabs ared opened, the existing tabs for each search engine will be <i>reused</i> for subsequent searches. This keeps the total number of tabs limited.
+      Once tabs are opened, the existing tabs for each search engine will be <i>reused</i> for subsequent searches. This keeps the total number of tabs limited.
     </p>
     <p>
-      ⚠️ Be sure to <b>allow pop-ups</b> on the Search Dragon site, so that new tabs are not blocked by your browser. You'll get a notification on the first search and then should click to allow pop-ups.
+      ⚠️ Be sure to <b>allow pop-ups</b> on the Search Dragon site, so that new tabs are not blocked by your browser. To do this, click the search all button and then check at the top of the Search Dragon site for a browser notication. Then click to allow e.g. on Firefox click "allow all pop-ups for michaelcurrin.github.io" or edit permissions by clicking the permissions icon in the URL bar, just before "https" on Firefox and Chrome.
     </p>
   `,
 });
