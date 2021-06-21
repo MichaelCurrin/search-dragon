@@ -12,11 +12,26 @@
 
 ## Preview
 
+
+The web app:
+
 <div align="center">
     <a href="https://michaelcurrin.github.io/search-dragon/">
-        <img src="/sample.png" alt="Sample screenshot" title="Sample screenshot" width="350" />
+        <img src="/sample.png" alt="Sample screenshot" title="Sample screenshot" width="400" />
     </a>
 </div>
+
+<br>
+
+A view of new tabs opened, when searching all search engines.
+
+<div align="center">
+    <a href="https://michaelcurrin.github.io/search-dragon/">
+        <img src="/sample-2.png" alt="Sample screenshot of tabs" title="Sample screenshot of tabs" width="900" />
+    </a>
+</div>
+
+<br>
 
 
 ## Usage
