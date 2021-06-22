@@ -55,7 +55,7 @@ const app = createApp({
       this.yahoo = `${SEARCH_BASES.yahoo}?q=${q}`;
       this.yandex = `${SEARCH_BASES.yandex}?text=${q}`;
     },
-    search() {
+    searchAll() {
       for (const engine of this.supportedEngines) {
         const href = this[engine];
         nav(href, engine);
@@ -73,6 +73,7 @@ const app = createApp({
       <input id="search-input" type="text"
         v-model="query"
         @input="setQueries"
+        @keyup.enter="searchAll"
         placeholder="e.g. Chinese dragon"
         size="40"
         autofocus
@@ -81,7 +82,7 @@ const app = createApp({
 
     <br>
 
-    <button id="search-button" @click="search()" :disabled="!query"
+    <button id="search-button" @click="searchAll" :disabled="!query"
       title="Search with all supported engines">
       Search all
     </button>
