@@ -6,7 +6,7 @@
 [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/search-dragon?include_prereleases=&sort=semver)](https://github.com/MichaelCurrin/search-dragon/releases/)
 [![License](https://img.shields.io/badge/License-MIT-blue)](#license)
 
-[![dependency - vue](https://img.shields.io/badge/vue-3-blue)](https://www.npmjs.com/package/vue)
+[![Dependency - vue](https://img.shields.io/badge/vue-3-blue)](https://www.npmjs.com/package/vue)
 [![Hosted with GH Pages](https://img.shields.io/badge/Hosted_with-GitHub_Pages-blue?logo=github&logoColor=white)](https://pages.github.com/)
 
 
@@ -33,7 +33,7 @@ A view of new tabs opened, when searching all search engines.
 <br>
 
 
-## Usage
+## Use the web app
 
 Enter a query once and search on multiple search engines at once. Reusing tabs for each site so you don't lose control of tabs.
 
@@ -43,38 +43,16 @@ Enter a query once and search on multiple search engines at once. Reusing tabs f
 
 </div>
 
-Follow the instructions on the page.
+Follow the instructions on the site.
 
 
 ## Documentation
 
-### Set up and run locally
+<div align="center">
 
-How to run the web app locally. No need for Node or NPM!
+[![View - Documentation](https://img.shields.io/badge/View-Documentation-blue?style=for-the-badge)](/docs/)
 
-1. Clone this original repo or your copy of the repo.
-    ```sh
-    $ git clone git@github.com:MichaelCurrin/search-dragon.git
-    ```
-2. Start a static server in the repo root. See recommended server options in this [gist](https://gist.github.com/MichaelCurrin/1a6116a4e0918c8468dc7e1a701a5f95).
-3. Open the browser at your localhost address.
-
-For a dev version of Vue with better debugging but a larger file to download, use `vue.esm-browser.js` instead of `vue.esm-browser.prod.js` in [main.js](/main.js).
-
-### Deploy
-
-How to set up as a GitHub Pages site. No CI needed.
-
-1. Go to your repo's _Settings_.
-2. Enable _GitHub Pages_.
-3. After a few seconds, open your site deployed at `MyUsername.github.io/search-dragon`.
-
-To make changes, push commits to GitHub and after a few seconds you can refresh your site and see the results.
-
-
-## Credits
-
-- [Asian Dragon Silhouette](/assets/logo.svg) SVG from [Free SVG](https://freesvg.org/asian-dragon-silhouette).
+</div>
 
 
 ## License
