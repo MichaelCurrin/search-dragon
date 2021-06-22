@@ -1,4 +1,4 @@
-# Search Dragon 🔍 🐲 🏮
+# Search Dragon 🔍 🐲
 > The meta search engine
 
 <!-- Badges generated with https://michaelcurrin.github.io/badge-generator/ -->
