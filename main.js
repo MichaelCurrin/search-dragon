@@ -81,6 +81,9 @@ const app = createApp({
       this.openTabs();
       this.permissionWarning();
     },
+    titlecase(value) {
+      return `${value[0].toUpperCase()}${value.slice(1, value.length)}`
+    }
   },
   template: `
     <h2>Dragon search engine</h2>
@@ -117,7 +120,7 @@ const app = createApp({
 
       <div v-for="engineName in this.supportedEngines" key="engineName.id">
         🏮 <a :href="this[engineName]" :target="engineName">
-          {{ engineName[0].toUpperCase() }}{{ engineName.slice(1, engineName.length)}}
+          {{ titlecase(engineName) }}
         </a>
       </div>
     </div>
