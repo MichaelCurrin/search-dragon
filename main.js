@@ -86,8 +86,6 @@ const app = createApp({
     },
   },
   template: `
-    <h2>Dragon search engine</h2>
-
     <div id="query">
       <label for="search-input">
         Query 🔍
@@ -109,10 +107,10 @@ const app = createApp({
       Search all 🔥
     </button>
 
-    <br>
-    <br>
-
     <div v-if="query">
+      <br>
+      <br>
+
       <p>
         Search above query on one search engine
       </p>
@@ -122,34 +120,6 @@ const app = createApp({
           {{ titlecase(engineName) }}
         </a>
       </div>
-    </div>
-
-    <br>
-
-    <h2>How to use</h2>
-
-    <div id="help">
-    <p>
-      <ol>
-        <li>Enter a search query.</li>
-        <li>Do a search.
-          <ul>
-            <li>Search all engines using the button or pressing <kbd>Enter</kbd> (opening or updating multiple tabs at once).
-            <li>Or click a specific engine (opening or updating only one tab).
-          </ul>
-        </li>
-        <li>
-          Come back to the Search Dragon tab to enter another query.
-        </li>
-        <li>
-          Do a search again. Note that the existing tab from the previous search will be reused. This keeps the total number of tabs limited and easy to manage.
-        </li>
-      </ol>
-    </p>
-
-    <p>
-      ⚠️ Be sure to <b>allow pop-ups</b> on the Search Dragon site, so that new tabs are not blocked by your browser. To do this, click the search all button and then check at the top of the Search Dragon site for a browser notication. Then click to allow e.g. on Firefox click "allow all pop-ups for michaelcurrin.github.io" or edit permissions by clicking the permissions icon in the URL bar, just before "https" on Firefox and Chrome.
-    </p>
     </div>
   `,
 });
