@@ -90,9 +90,8 @@ const app = createApp({
 
     <div id="query">
       <label for="search-input">
-        Query
+        Query 🔍
       </label>
-      {{ }}
       <input id="search-input" type="text"
         v-model="query"
         @input="setQueries"
