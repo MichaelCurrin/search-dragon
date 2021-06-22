@@ -82,8 +82,8 @@ const app = createApp({
       this.permissionWarning();
     },
     titlecase(value) {
-      return `${value[0].toUpperCase()}${value.slice(1, value.length)}`
-    }
+      return `${value[0].toUpperCase()}${value.slice(1, value.length)}`;
+    },
   },
   template: `
     <h2>Dragon search engine</h2>
