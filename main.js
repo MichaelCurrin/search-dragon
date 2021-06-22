@@ -70,8 +70,13 @@ const app = createApp({
         Query
       </label>
       {{ }}
-      <input id="search-input" type="text" v-model="query" @input="setQueries"
-        placeholder="e.g. Chinese dragon" size="40" required/>
+      <input id="search-input" type="text"
+        v-model="query"
+        @input="setQueries"
+        placeholder="e.g. Chinese dragon"
+        size="40"
+        autofocus
+        required/>
     </div >
 
     <br>
