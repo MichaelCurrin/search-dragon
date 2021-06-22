@@ -24,6 +24,10 @@ header {
   margin: 30px;
 }
 
+#help {
+  text-align: left;
+}
+
 #query {
   font-size: large;
 }
