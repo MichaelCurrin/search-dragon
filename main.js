@@ -32,7 +32,7 @@ function nav(url, windowName) {
 
   windowObjectRefs[windowName] = ref;
 
-  return ref
+  return ref;
 }
 
 // The nav function is used to handle open multiple tabs using JS. For selecting a single engine,
@@ -47,7 +47,7 @@ const app = createApp({
       yahoo: "",
       yandex: "",
       supportedEngines: Object.keys(SEARCH_BASES),
-      popUpsBlocked: false
+      popUpsBlocked: false,
     };
   },
   methods: {
@@ -66,18 +66,20 @@ const app = createApp({
         const ref = nav(href, engine);
 
         if (ref === null) {
-          this.popUpsBlocked = true
+          this.popUpsBlocked = true;
         }
       }
     },
     permissionWarning() {
       if (this.popUpsBlocked === true) {
-        alert("Please enable pop-ups on Search Dragon dragon and then search again.")
+        alert(
+          "Please enable pop-ups on Search Dragon dragon and then search again."
+        );
       }
     },
     searchAll() {
-      this.openTabs()
-      this.permissionWarning()
+      this.openTabs();
+      this.permissionWarning();
     },
   },
   template: `
