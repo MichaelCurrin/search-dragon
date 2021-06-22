@@ -1,8 +1,11 @@
 # Contributing
 
+
 ## Issues
 
 Request a feature or bug fix.
+
+Go to [Issues](https://github.com/MichaelCurrin/search-dragon/issues).
 
 
 ## Pull Requests
