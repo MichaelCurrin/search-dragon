@@ -12,7 +12,6 @@
 
 ## Preview
 
-
 The web app:
 
 <div align="center">
@@ -36,13 +35,15 @@ A view of new tabs opened, when searching all search engines.
 
 ## Usage
 
+Enter a query once and search on multiple search engines at once. Reusing tabs for each site so you don't lose control of tabs.
+
 <div align="center">
 
 [![View site - GH Pages](https://img.shields.io/badge/View_site-GH_Pages-2ea44f?style=for-the-badge)](https://michaelcurrin.github.io/search-dragon/)
 
 </div>
 
-Follow the instructions on the web app to enter a search query and then search on multple search engines at once, each in their own tab.
+Follow the instructions on the page.
 
 
 ## Documentation
