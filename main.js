@@ -92,7 +92,7 @@ const app = createApp({
 
     <div v-if="query">
       <p>
-        <i>Use selected engine</i>
+        Search above query on one search engine
       </p>
 
       <div v-for="engine in this.supportedEngines" key="engine.id">
