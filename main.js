@@ -115,9 +115,9 @@ const app = createApp({
         Search above query on one search engine
       </p>
 
-      <div v-for="engine in this.supportedEngines" key="engine.id">
-        🏮 <a :href="this[engine]" :target="engine">
-          {{ engine[0].toUpperCase() }}{{ engine.slice(1, engine.length)}}
+      <div v-for="engineName in this.supportedEngines" key="engineName.id">
+        🏮 <a :href="this[engineName]" :target="engineName">
+          {{ engineName[0].toUpperCase() }}{{ engineName.slice(1, engineName.length)}}
         </a>
       </div>
     </div>
