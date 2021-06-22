@@ -104,7 +104,7 @@ const app = createApp({
 
     <button id="search-button" @click="searchAll" :disabled="!query"
       title="Search with all supported engines">
-      Search all
+      Search all 🔥
     </button>
 
     <br>
@@ -116,7 +116,7 @@ const app = createApp({
       </p>
 
       <div v-for="engine in this.supportedEngines" key="engine.id">
-        🕵️‍♂️ <a :href="this[engine]" :target="engine">
+        🏮 <a :href="this[engine]" :target="engine">
           {{ engine[0].toUpperCase() }}{{ engine.slice(1, engine.length)}}
         </a>
       </div>
