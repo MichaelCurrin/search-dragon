@@ -65,13 +65,13 @@ const app = createApp({
   template: `
     <h2>Dragon search engine</h2>
 
-    <div>
+    <div id="query">
       <label for="search-input">
         Query
       </label>
       {{ }}
       <input id="search-input" type="text" v-model="query" @input="setQueries"
-        placeholder="e.g. Chinese dragon" required/>
+        placeholder="e.g. Chinese dragon" size="40" required/>
     </div >
 
     <br>
