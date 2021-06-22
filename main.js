@@ -102,17 +102,33 @@ const app = createApp({
       </div>
     </div>
 
+    <br>
+
     <h2>How to use</h2>
 
+    <div id="help">
     <p>
-      Enter a value for Query box and then search all engines (opening or updating multiple tabs at once) or against a specific engine (opening or updating only one tab).
+      <ol>
+        <li>Enter a search query.</li>
+        <li>Do a search.
+          <ul>
+            <li>Search all engines using the button or pressing <kbd>Enter</kbd> (opening or updating multiple tabs at once).
+            <li>Or click a specific engine (opening or updating only one tab).
+          </ul>
+        </li>
+        <li>
+          Come back to the Search Dragon tab to enter another query.
+        </li>
+        <li>
+          Do a search again. Note that the existing tab from the previous search will be reused. This keeps the total number of tabs limited and easy to manage.
+        </li>
+      </ol>
     </p>
-    <p>
-      Once tabs are opened, the existing tabs for each search engine will be <i>reused</i> for subsequent searches. This keeps the total number of tabs limited.
-    </p>
+
     <p>
       ⚠️ Be sure to <b>allow pop-ups</b> on the Search Dragon site, so that new tabs are not blocked by your browser. To do this, click the search all button and then check at the top of the Search Dragon site for a browser notication. Then click to allow e.g. on Firefox click "allow all pop-ups for michaelcurrin.github.io" or edit permissions by clicking the permissions icon in the URL bar, just before "https" on Firefox and Chrome.
     </p>
+    </div>
   `,
 });
 
