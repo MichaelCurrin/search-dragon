@@ -18,10 +18,10 @@ const SEARCH_BASES = {
  *
  * @param {string} url The URL to open.
  * @param {string} windowName Reference for the tab. Reusing this reference allows overwriting the
- *   contents of the tab without opening a new one each time. In this case, this reuse is intended
- *   even for a different URL (as it is expected to still be for the same domain).
+ *   contents of the tab - without opening a new one each time. In this case, this reuse of a tab is
+ *   intended to switch to different search query or query type for the same domain.
  *
- * Do not bother to check if tab is closed or open.
+ * Do not bother to check if tab is closed or open, as that info is not useful here.
  */
 function nav(url, windowName) {
   console.debug(`Opening ${windowName} - ${url}`);
