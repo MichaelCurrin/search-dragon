@@ -21,7 +21,7 @@ const SEARCH_BASES = {
  *   contents of the tab without opening a new one each time. In this case, this reuse is intended
  *   even for a different URL (as it is expected to still be for the same domain).
  *
- * Do not both to check if tab is closed or open.
+ * Do not bother to check if tab is closed or open.
  */
 function nav(url, windowName) {
   console.debug(`Opening ${windowName} - ${url}`);
