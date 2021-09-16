@@ -105,21 +105,21 @@ const app = createApp({
 
     <br>
 
-    <button id="search-button" @click="searchAll" :disabled="!query"
+    <button class="btn" @click="searchAll" :disabled="!query"
       title="Search with all supported engines">
-      Search all engines 🔥
+      🔥 Search all engines
     </button>
 
-    <div v-if="query">
-      <br>
-
+    <div>
       <p>
         Search one engine
       </p>
 
       <div v-for="engineName in this.supportedEngines" key="engineName.id">
-        🏮 <a :href="this[engineName]" :target="engineName">
-          {{ titlecase(engineName) }}
+        <a :href="this[engineName]" :target="engineName">
+            <button class="btn" :title="\`Search with \${engineName}\`" :disabled="!query">
+              🏮 {{ titlecase(engineName) }}
+            </button>
         </a>
       </div>
     </div>
