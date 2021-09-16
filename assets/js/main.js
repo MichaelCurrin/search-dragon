@@ -36,8 +36,7 @@ function nav(url, windowName) {
 }
 
 function encode(query) {
-  return encodeURIComponent(query)
-    .replace("%20", "+");
+  return encodeURIComponent(query).replace("%20", "+");
 }
 
 // The nav function is used to handle open multiple tabs using JS. For selecting a single engine,
@@ -57,7 +56,7 @@ const app = createApp({
   },
   methods: {
     setQueries() {
-      const q = encode(this.query)
+      const q = encode(this.query);
 
       this.bing = `${SEARCH_BASES.bing}?q=${q}`;
       this.duckDuckGo = `${SEARCH_BASES.duckDuckGo}?q=${q}`;
