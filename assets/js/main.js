@@ -72,9 +72,7 @@ const app = createApp({
     },
     permissionWarning() {
       if (this.popUpsBlocked === true) {
-        alert(
-          "Please enable pop-ups on Search Dragon and then search again."
-        );
+        alert("Please enable pop-ups on Search Dragon and then search again.");
       }
     },
     searchAll() {
