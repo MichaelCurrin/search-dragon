@@ -51,7 +51,7 @@ const app = createApp({
     setQueries() {
       const q = encode(this.query);
 
-      const { bing, duckDuckGo, google, yahoo, yandex } = standardUrls()
+      const { bing, duckDuckGo, google, yahoo, yandex } = standardUrls(q)
       this.bing = bing
       this.duckDuckGo = duckDuckGo
       this.google = google

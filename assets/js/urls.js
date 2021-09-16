@@ -8,7 +8,7 @@ const STANDARD_SEARCH_BASES = {
 
 export const SUPPORTED_ENGINES = Object.keys(STANDARD_SEARCH_BASES)
 
-export function standardUrls() {
+export function standardUrls(q) {
   const bing = `${STANDARD_SEARCH_BASES.bing}?q=${q}`;
   const duckDuckGo = `${STANDARD_SEARCH_BASES.duckDuckGo}?q=${q}`;
   const google = `${STANDARD_SEARCH_BASES.google}?q=${q}`;
