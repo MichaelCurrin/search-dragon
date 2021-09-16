@@ -7,14 +7,17 @@ import { standardUrls, SUPPORTED_ENGINES } from "./urls.js";
 const windowObjectRefs = {};
 
 /**
- * Open URL as a tab.
- *
- * @param {string} url The URL to open.
- * @param {string} windowName Reference for the tab. Reusing this reference allows overwriting the
- *   contents of the tab - without opening a new one each time. In this case, this reuse of a tab is
- *   intended to switch to different search query or query type for the same domain.
+ * Open URL as a managed tab.
  *
  * Do not bother to check if tab is closed or open, as that info is not useful here.
+ *
+ * @param {string} url The URL to open.
+ * @param {string} windowName Reference for the tab. Reusing this reference
+ *   allows overwriting the contents of the tab - without opening a new one each
+ *   time. In this case, this reuse of a tab is intended to switch to different
+ *   search query or query type for the same domain.
+ *
+ * @returns ref Window object reference
  */
 function navigateTo(url, windowName) {
   console.debug(`Opening ${windowName} - ${url}`);
@@ -32,8 +35,8 @@ function encode(query) {
   return encodeURIComponent(query).replace("%20", "+");
 }
 
-// The nav function is used to handle open multiple tabs using JS. For selecting a single engine,
-// plain HTML is used.
+// The nav function is used to handle open multiple tabs using JS. For selecting
+// a single engine, plain HTML is used.
 const app = createApp({
   data() {
     return {
@@ -110,7 +113,8 @@ const app = createApp({
 
       <div v-for="engineName in this.supportedEngines" key="engineName.id">
         <a :href="this[engineName]" :target="engineName">
-            <button class="btn" :title="\`Search with \${engineName}\`" :disabled="!query">
+            <button class="btn" :title="\`Search with \${engineName}\`"
+              :disabled="!query">
               🏮 {{ titlecase(engineName) }}
             </button>
         </a>
