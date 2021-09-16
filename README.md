@@ -6,7 +6,7 @@
 [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/search-dragon?include_prereleases=&sort=semver)](https://github.com/MichaelCurrin/search-dragon/releases/ "View GitHub releases")
 [![License](https://img.shields.io/badge/License-MIT-blue)](#license "Go to License section")
 
-[![Dependency - vue](https://img.shields.io/badge/vue-3-blue)](https://www.npmjs.com/package/vue "Go to Vue on NPM")
+[![Dependency - vue](https://img.shields.io/badge/vue-3-blue?logo=vue.js&logoColor=white)](https://www.npmjs.com/package/vue "Go to Vue on NPM")
 [![Hosted with GH Pages](https://img.shields.io/badge/Hosted_with-GitHub_Pages-blue?logo=github&logoColor=white)](https://pages.github.com/ "Go to GitHub Pages homepage")
 
 
