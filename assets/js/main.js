@@ -65,9 +65,9 @@ const app = createApp({
       this.yandex = `${SEARCH_BASES.yandex}?text=${q}`;
     },
     openTabs() {
-      for (const engine of this.supportedEngines) {
-        const href = this[engine];
-        const ref = nav(href, engine);
+      for (const engineName of this.supportedEngines) {
+        const href = this[engineName];
+        const ref = nav(href, engineName);
 
         if (ref === null) {
           this.popUpsBlocked = true;
