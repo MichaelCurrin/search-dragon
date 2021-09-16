@@ -2,16 +2,9 @@
  * Main app module.
  */
 import { createApp } from "https://unpkg.com/vue@3.1.1/dist/vue.esm-browser.prod.js";
+import { standardUrls, SUPPORTED_ENGINES } from "./urls.js";
 
 const windowObjectRefs = {};
-
-const SEARCH_BASES = {
-  bing: "https://www.bing.com/search",
-  duckDuckGo: "https://duckduckgo.com/",
-  google: "https://www.google.com/search",
-  yahoo: "https://search.yahoo.com/search",
-  yandex: "https://yandex.com/search/",
-};
 
 /**
  * Open URL as a tab.
@@ -50,7 +43,7 @@ const app = createApp({
       google: "",
       yahoo: "",
       yandex: "",
-      supportedEngines: Object.keys(SEARCH_BASES),
+      supportedEngines: SUPPORTED_ENGINES,
       popUpsBlocked: false,
     };
   },
@@ -58,11 +51,12 @@ const app = createApp({
     setQueries() {
       const q = encode(this.query);
 
-      this.bing = `${SEARCH_BASES.bing}?q=${q}`;
-      this.duckDuckGo = `${SEARCH_BASES.duckDuckGo}?q=${q}`;
-      this.google = `${SEARCH_BASES.google}?q=${q}`;
-      this.yahoo = `${SEARCH_BASES.yahoo}?q=${q}`;
-      this.yandex = `${SEARCH_BASES.yandex}?text=${q}`;
+      const { bing, duckDuckGo, google, yahoo, yandex } = standardUrls()
+      this.bing = bing
+      this.duckDuckGo = duckDuckGo
+      this.google = google
+      this.yahoo = yahoo
+      this.yandex = yandex
     },
     openTabs() {
       for (const engineName of this.supportedEngines) {
