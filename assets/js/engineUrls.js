@@ -9,11 +9,11 @@ const STANDARD_SEARCH_BASES = {
 export const SUPPORTED_ENGINES = Object.keys(STANDARD_SEARCH_BASES)
 
 /**
- * URL encode a search query string.
+ * Encode a search query string.
  *
- * @param {string} query
+ * @param {string} query User input of what to search.
  *
- * @returns {string} encoded string.
+ * @returns {string} encoded string for use in a URL.
  */
 function encode(query) {
   return encodeURIComponent(query).replace("%20", "+");
