@@ -17,7 +17,7 @@ const windowObjectRefs = {};
  *   time. In this case, this reuse of a tab is intended to switch to different
  *   search query or query type for the same domain.
  *
- * @returns ref Window object reference
+ * @returns {Object} Window object reference
  */
 function navigateTo(url, windowName) {
   console.debug(`Opening ${windowName} - ${url}`);
@@ -31,6 +31,13 @@ function navigateTo(url, windowName) {
   return ref;
 }
 
+/**
+ * URL encode a search query string.
+ *
+ * @param {string} query
+ *
+ * @returns {string} encoded string.
+ */
 function encode(query) {
   return encodeURIComponent(query).replace("%20", "+");
 }
