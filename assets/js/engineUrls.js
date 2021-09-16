@@ -8,7 +8,20 @@ const STANDARD_SEARCH_BASES = {
 
 export const SUPPORTED_ENGINES = Object.keys(STANDARD_SEARCH_BASES)
 
-export function standardUrls(q) {
+/**
+ * URL encode a search query string.
+ *
+ * @param {string} query
+ *
+ * @returns {string} encoded string.
+ */
+function encode(query) {
+  return encodeURIComponent(query).replace("%20", "+");
+}
+
+export function standardUrls(query) {
+  const q = encode(query)
+
   const bing = `${STANDARD_SEARCH_BASES.bing}?q=${q}`;
   const duckDuckGo = `${STANDARD_SEARCH_BASES.duckDuckGo}?q=${q}`;
   const google = `${STANDARD_SEARCH_BASES.google}?q=${q}`;

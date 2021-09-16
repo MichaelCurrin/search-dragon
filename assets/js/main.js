@@ -31,17 +31,6 @@ function navigateTo(url, windowName) {
   return ref;
 }
 
-/**
- * URL encode a search query string.
- *
- * @param {string} query
- *
- * @returns {string} encoded string.
- */
-function encode(query) {
-  return encodeURIComponent(query).replace("%20", "+");
-}
-
 // The nav function is used to handle open multiple tabs using JS. For selecting
 // a single engine, plain HTML is used.
 const app = createApp({
@@ -59,9 +48,7 @@ const app = createApp({
   },
   methods: {
     setQueries() {
-      const q = encode(this.query);
-
-      const { bing, duckDuckGo, google, yahoo, yandex } = standardUrls(q)
+      const { bing, duckDuckGo, google, yahoo, yandex } = standardUrls(this.query)
       this.bing = bing
       this.duckDuckGo = duckDuckGo
       this.google = google
