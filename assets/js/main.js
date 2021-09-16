@@ -2,7 +2,7 @@
  * Main app module.
  */
 import { createApp } from "https://unpkg.com/vue@3.1.1/dist/vue.esm-browser.prod.js";
-import { standardUrls, SUPPORTED_ENGINES } from "./urls.js";
+import { standardUrls, SUPPORTED_ENGINES } from "./engineUrls.js";
 
 const windowObjectRefs = {};
 
