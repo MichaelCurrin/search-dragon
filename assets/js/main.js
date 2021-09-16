@@ -16,7 +16,7 @@ const windowObjectRefs = {};
  *
  * Do not bother to check if tab is closed or open, as that info is not useful here.
  */
-function nav(url, windowName) {
+function navigateTo(url, windowName) {
   console.debug(`Opening ${windowName} - ${url}`);
 
   let ref = windowObjectRefs[windowName];
@@ -61,7 +61,7 @@ const app = createApp({
     openTabs() {
       for (const engineName of this.supportedEngines) {
         const href = this[engineName];
-        const ref = nav(href, engineName);
+        const ref = navigateTo(href, engineName);
 
         if (ref === null) {
           this.popUpsBlocked = true;
