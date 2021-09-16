@@ -6,7 +6,7 @@ const STANDARD_SEARCH_BASES = {
   yandex: "https://yandex.com/search/",
 };
 
-export const SUPPORTED_ENGINES = Object.keys(STANDARD_SEARCH_BASES)
+export const SUPPORTED_ENGINES = Object.keys(STANDARD_SEARCH_BASES);
 
 /**
  * Encode a search query string.
@@ -20,7 +20,7 @@ function encode(query) {
 }
 
 export function standardUrls(query) {
-  const q = encode(query)
+  const q = encode(query);
 
   const bing = `${STANDARD_SEARCH_BASES.bing}?q=${q}`;
   const duckDuckGo = `${STANDARD_SEARCH_BASES.duckDuckGo}?q=${q}`;
@@ -28,5 +28,5 @@ export function standardUrls(query) {
   const yahoo = `${STANDARD_SEARCH_BASES.yahoo}?q=${q}`;
   const yandex = `${STANDARD_SEARCH_BASES.yandex}?text=${q}`;
 
-  return { bing, duckDuckGo, google, yahoo, yandex }
+  return { bing, duckDuckGo, google, yahoo, yandex };
 }

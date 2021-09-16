@@ -48,12 +48,14 @@ const app = createApp({
   },
   methods: {
     setQueries() {
-      const { bing, duckDuckGo, google, yahoo, yandex } = standardUrls(this.query)
-      this.bing = bing
-      this.duckDuckGo = duckDuckGo
-      this.google = google
-      this.yahoo = yahoo
-      this.yandex = yandex
+      const { bing, duckDuckGo, google, yahoo, yandex } = standardUrls(
+        this.query
+      );
+      this.bing = bing;
+      this.duckDuckGo = duckDuckGo;
+      this.google = google;
+      this.yahoo = yahoo;
+      this.yandex = yandex;
     },
     openTabs() {
       for (const engineName of this.supportedEngines) {
