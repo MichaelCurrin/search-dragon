@@ -35,6 +35,11 @@ function nav(url, windowName) {
   return ref;
 }
 
+function encode(query) {
+  return encodeURIComponent(query)
+    .replace("%20", "+");
+}
+
 // The nav function is used to handle open multiple tabs using JS. For selecting a single engine,
 // plain HTML is used.
 const app = createApp({
@@ -52,7 +57,7 @@ const app = createApp({
   },
   methods: {
     setQueries() {
-      const q = encodeURIComponent(this.query).replace("%20", "+");
+      const q = encode(this.query)
 
       this.bing = `${SEARCH_BASES.bing}?q=${q}`;
       this.duckDuckGo = `${SEARCH_BASES.duckDuckGo}?q=${q}`;
@@ -102,15 +107,14 @@ const app = createApp({
 
     <button id="search-button" @click="searchAll" :disabled="!query"
       title="Search with all supported engines">
-      Search all 🔥
+      Search all engines 🔥
     </button>
 
     <div v-if="query">
       <br>
-      <br>
 
       <p>
-        Search above query on one search engine
+        Search one engine
       </p>
 
       <div v-for="engineName in this.supportedEngines" key="engineName.id">
