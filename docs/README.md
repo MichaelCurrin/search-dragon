@@ -1,4 +1,4 @@
-# Search Dragon
+# Search Dragon documentation
 
 - [Set up and run](setup-and-run.md)
 - [Deploy](deploy.md)
