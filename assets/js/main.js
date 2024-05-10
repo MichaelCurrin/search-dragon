@@ -49,7 +49,7 @@ const app = createApp({
   methods: {
     setQueries() {
       const { bing, duckDuckGo, google, yahoo, yandex } = standardUrls(
-        this.query
+        this.query,
       );
       this.bing = bing;
       this.duckDuckGo = duckDuckGo;
