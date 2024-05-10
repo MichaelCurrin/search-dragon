@@ -17,7 +17,7 @@ const windowObjectRefs = {};
  *   time. In this case, this reuse of a tab is intended to switch to different
  *   search query or query type for the same domain.
  *
- * @returns {Object} Window object reference
+ * @returns {Object} Window object reference.
  */
 function navigateTo(url, windowName) {
   console.debug(`Opening ${windowName} - ${url}`);
@@ -107,14 +107,14 @@ const app = createApp({
         Search one engine
       </p>
 
-      <div v-for="engineName in this.supportedEngines" key="engineName.id">
+      <span v-for="engineName in this.supportedEngines" key="engineName.id">
         <a :href="this[engineName]" :target="engineName">
             <button class="btn" :title="\`Search with \${engineName}\`"
               :disabled="!query">
               🏮 {{ titlecase(engineName) }}
             </button>
         </a>
-      </div>
+      </span>
     </div>
   `,
 });
